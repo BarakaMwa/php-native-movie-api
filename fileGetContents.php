@@ -16,7 +16,7 @@ $options = [
 $context =  stream_context_create($options);
 
 //$response  = file_get_contents("https://api.themoviedb.org/3/movie/popular?api_key=d0f5f2e135336200362af8a1a73acb17");
-$response  = file_get_contents("https://api.themoviedb.org/3/movie/popular?api_key=d0f5f2e135336200362af8a1a73acb17");
+$response  = file_get_contents("https://api.themoviedb.org/3/tv/popular?api_key=d0f5f2e135336200362af8a1a73acb17");
 //$response  = file_get_contents("https://api.themoviedb.org/3/search/movie?api_key=d0f5f2e135336200362af8a1a73acb17&page=2&query=".$query);
 
 $json=str_replace('},
