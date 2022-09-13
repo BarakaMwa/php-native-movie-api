@@ -117,11 +117,10 @@ $data = json_decode($json, TRUE);
                             </a>
                         </li>
                     </ul>
-                    <div class="navbar-buttons mbr-section-btn">
-                        <a role="button" class="btn btn-sm btn-white-outline display-4" id="sidebarCollapse"><span
+                    <div class="navbar-buttons mbr-section-btn"><a role="button" class="btn btn-sm btn-white-outline display-4"
+                                                                   href="#"><span
                                     class="mbrib-menu mbr-iconfont mbr-iconfont-btn"
                                     style="color: rgb(15, 118, 153);"></span>
-                            Menu
                         </a></div>
                 </div>
             </nav>
