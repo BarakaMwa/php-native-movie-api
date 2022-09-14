@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html>
 <?php
 $response = file_get_contents("https://api.themoviedb.org/3/movie/popular?api_key=d0f5f2e135336200362af8a1a73acb17");
 $json = str_replace('},
@@ -21,14 +19,15 @@ $data = json_decode($json, TRUE);
     <meta name="description" content="">
 
     <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+    <link rel="stylesheet" href="assets/web/assets/mobirise-icons-bold/mobirise-icons-bold.css">
     <link rel="stylesheet" href="assets/tether/tether.min.css">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="assets/animatecss/animate.min.css">
     <link rel="stylesheet" href="assets/dropdown/css/style.css">
     <link rel="stylesheet" href="assets/theme/css/style.css">
     <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+
     <link rel="stylesheet" href="assets/theme/css/sidebar-style.css">
 
 </head>
@@ -36,95 +35,11 @@ $data = json_decode($json, TRUE);
 
 <section class="wrapper">
     <!-- Sidebar Holder -->
-    <nav id="sidebar">
-        <div class="sidebar-header">
-            <h3>FilmMedia Pedia</h3>
-        </div>
-
-        <ul class="list-unstyled components">
-            <p>Dummy Heading</p>
-            <li class="active">
-                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Home</a>
-                <ul class="collapse list-unstyled" id="homeSubmenu">
-                    <li><a href="#">Home 1</a></li>
-                    <li><a href="#">Home 2</a></li>
-                    <li><a href="#">Home 3</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">About</a>
-                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
-                <ul class="collapse list-unstyled" id="pageSubmenu">
-                    <li><a href="#">Page 1</a></li>
-                    <li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">Portfolio</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
-            </li>
-        </ul>
-
-        <ul class="list-unstyled CTAs">
-            <li><a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a></li>
-            <li><a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a></li>
-        </ul>
-    </nav>
+    <?php include ("sidebar.php");?>
 
     <section class="content">
         <section class="menu cid-theWZsoV5t" once="menu" id="menu2-m">
-
-            <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation">
-                    <div class="hamburger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </button>
-                <div class="menu-logo">
-                    <div class="navbar-brand">
-                <span class="navbar-logo">
-                    <a href="https://mobirise.com">
-                        <img src="assets/images/mbr-122x122.png" alt="FilmPedia" title="" style="height: 3.8rem;">
-                    </a>
-                </span>
-                        <span class="navbar-caption-wrap">
-                            <a class="navbar-caption text-black display-4" href="https://mobirise.com">
-                        FilmMedia Pedia
-                    </a>
-                        </span>
-                    </div>
-                </div>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
-                        <li class="nav-item">
-                            <a class="nav-link link text-black display-4" href="https://mobirise.com">
-                                TvShows</a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link link text-black display-4" href="https://mobirise.com">
-                                Movies</a></li>
-                        <li class="nav-item">
-                            <a class="nav-link link text-black display-4" href="https://mobirise.com">
-                                About Us
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="navbar-buttons mbr-section-btn"><a role="button" class="btn btn-sm btn-white-outline display-4"
-                                                                   href="#"><span
-                                    class="mbrib-menu mbr-iconfont mbr-iconfont-btn"
-                                    style="color: rgb(15, 118, 153);"></span>
-                        </a></div>
-                </div>
-            </nav>
-
+           <?php include ("navbar.php");?>
         </section>
 
         <section class="header3 cid-thfff8bFwG mbr-fullscreen mbr-parallax-background" id="header3-t">
@@ -190,7 +105,7 @@ $data = json_decode($json, TRUE);
                         ?>
                         <div class="card col-md-3 col-lg-2 col-xl-2  col-sm-4 col-xs-6 align-center">
                             <div class="card-img">
-                                <img src="https://image.tmdb.org/t/p/w500<?php echo $value["poster_path"]; ?>"
+                                <img  class="img-thumbnail rounded" src="https://image.tmdb.org/t/p/w500<?php echo $value["poster_path"]; ?>"
                                      alt="Poster">
                             </div>
                             <div class="card-box align-center">
@@ -198,7 +113,7 @@ $data = json_decode($json, TRUE);
                                     <?php echo $value["original_title"] ?>
                                 </h4>
                                 <div class="mbr-section-btn align-center text-sm-center text-center btn-bottom">
-                                    <a href="" class="btn btn-secondary btn-xs display-4 text-sm-center">View</a>
+                                    <a href="movie_view.php?movie_id=<?php echo $value["id"]?>" class="btn btn-block btn-secondary text-black display-4 text-sm-center">View</a>
                                 </div>
                             </div>
                         </div>
@@ -248,7 +163,7 @@ $data = json_decode($json, TRUE);
                         ?>
                         <div class="card col-md-3 col-lg-2 col-xl-2  col-sm-4 col-xs-6 align-center">
                             <div class="card-img">
-                                <img src="https://image.tmdb.org/t/p/w500<?php echo $value["poster_path"]; ?>"
+                                <img class="img-thumbnail rounded" src="https://image.tmdb.org/t/p/w500<?php echo $value["poster_path"]; ?>"
                                      alt="Poster">
                             </div>
                             <div class="card-box align-center">
@@ -288,15 +203,15 @@ $data = json_decode($json, TRUE);
 
 
 <script src="assets/web/assets/jquery/jquery.min.js"></script>
-<script src="assets/popper/popper.min.js"></script>
 <script src="assets/tether/tether.min.js"></script>
+<script src="assets/popper/popper.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/smoothscroll/smooth-scroll.js"></script>
-<script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
-<script src="assets/viewportchecker/jquery.viewportchecker.js"></script>
-<script src="assets/parallax/jarallax.min.js"></script>
 <script src="assets/dropdown/js/script.min.js"></script>
-<script src="assets/theme/js/script.js"></script>
+<script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
+<script src="assets/parallax/jarallax.min.js"></script>
+<!--<script src="assets/smoothscroll/smooth-scroll.js"></script>-->
+<!--<script src="assets/theme/js/script.js"></script>-->
+
 <script src="assets/theme/js/sidebar-script.js"></script>
 
 

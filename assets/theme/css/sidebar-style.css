@@ -196,13 +196,14 @@ a.article:hover {
 .card {
     position: relative;
     padding: 0px;
-    padding-left: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .card-box {
     position: absolute;
     text-align: left;
-    width: 94%;
+    width: 90%;
     height: 100%;
 }
 
@@ -226,4 +227,43 @@ a.article:hover {
     border-radius: 0;
     padding: 0px;
     background-color: #149dcc;
+}
+
+.bottom-line{
+    border-bottom: 4px solid white;
+}
+
+.small-select{
+    position: relative;
+    display: block;
+    padding: .5rem .5rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+}
+.small-select:hover {
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    border-color: white;
+}
+
+.page-link:hover {
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    border-color: white;
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
 }
