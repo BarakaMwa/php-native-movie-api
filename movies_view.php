@@ -7,15 +7,6 @@ const HTTPS_API_THEMOVIEDB_ORG_3_MOVIE_POPULAR_API_KEY_PAGE_1 = "https://api.the
 const HTTPS_API_THEMOVIEDB_ORG_3_MOVIE = "https://api.themoviedb.org/3/movie/";
 const HTTPS_API_THEMOVIEDB_ORG_3_SEARCH_MOVIE = "https://api.themoviedb.org/3/search/movie";
 $response = null;
-function getFirstPageResponse()
-{
-    return file_get_contents(HTTPS_API_THEMOVIEDB_ORG_3_MOVIE_POPULAR_API_KEY_PAGE_1);
-}
-
-function getPageResponse(int $page, string $language)
-{
-    return file_get_contents(HTTPS_API_THEMOVIEDB_ORG_3_MOVIE_POPULAR_API_KEY . "&page=" . $page . "&language=" . $language);
-}
 
 $api_key = KEY;
 $url = HTTPS_API_THEMOVIEDB_ORG_3_MOVIE;
@@ -132,7 +123,7 @@ $data = json_decode($json, TRUE);
                                     <?php echo $value["original_title"] ?>
                                 </h4>
                                 <div class="mbr-section-btn align-center text-sm-center text-center btn-bottom">
-                                    <a href="" class="btn btn-secondary btn-xs display-4 text-sm-center">View</a>
+                                    <a href="movie_view.php?movie_id=<?php echo $value["id"]?>" class="btn btn-secondary btn-xs display-4 text-sm-center">View</a>
                                 </div>
                             </div>
                         </div>
@@ -197,7 +188,7 @@ $data = json_decode($json, TRUE);
                 '<div class="card-box align-center">' +
                 '<h4 class="card-title mbr-fonts-style display-7">' + data.original_title + '</h4>' +
                 '<div class="mbr-section-btn align-center text-sm-center text-center btn-bottom">' +
-                '<a href="" class="btn btn-secondary btn-xs display-4 text-sm-center">View</a>' +
+                '<a href="movie_view.php?movie_id=' + data.id + '" class="btn btn-secondary btn-xs display-4 text-sm-center">View</a>' +
                 '</div>' +
                 '</div>' +
                 '</div>'

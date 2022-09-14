@@ -1,4 +1,34 @@
 <?php
+
+$movie_id =0;
+$response = null;
+$page_category = "";
+$language = "en-US";
+const KEY = "d0f5f2e135336200362af8a1a73acb17";
+const API_KEY = "?api_key=" . KEY;
+const HTTPS_API_THEMOVIEDB_ORG_3_MOVIE = "https://api.themoviedb.org/3/movie/";
+
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+    $language = "&language=" . $language;
+
+    if (isset($_GET["language"]) && !empty($_GET["language"])) {
+        $language = $_GET["language"];
+        $language = "&language=" . $language;
+    }
+
+    if (isset($_GET["movie_id"]) && !empty($_GET["movie_id"])) {
+        $movie_id = $_GET["movie_id"];
+    }
+    $url = HTTPS_API_THEMOVIEDB_ORG_3_MOVIE. $movie_id .API_KEY.$language;
+
+    $response = file_get_contents($url);
+}
+$json = str_replace('},
+
+]', "}
+
+]", $response);
+$data = json_decode($json, TRUE);
 ?>
 <!DOCTYPE html>
 <html>
@@ -36,6 +66,7 @@
         <section class="menu cid-theWZsoV5t" once="menu" id="menu2-m">
             <?php include("navbar.php"); ?>
         </section>
+
     </section>
 </section>
 
