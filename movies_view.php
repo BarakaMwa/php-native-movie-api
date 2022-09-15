@@ -96,12 +96,13 @@ $data = json_decode($json, TRUE);
                         <div class="title col-12 col-md-12 bottom-line">
                             <h2 class="align-center mbr-bold mbr-white pb-3 mbr-fonts-style display-5">Movie List</h2>
                         </div>
-                        <input type="search" class="form-control mt-3" name="search" id="search" placeholder="Search..">
+                        <input type="search" class="form-control-sm mt-3" name="search" onkeyup="searchQuery(this.value)" id="search"
+                               placeholder="Search......">
                     </div>
                     <div class="row pl-5 pr-4 mt-4">
-                        <div id="page-selection">Page <span id="page-number-alert"
-                                                            class="badge badge-light">1</span>/<span
-                                    class="badge badge-light" id="total-pages-alert"><?php echo $totalPages; ?></span>
+                        <div id="page-selection">Page
+                            <span id="page-number-alert" class="badge badge-light">1</span>/
+                            <span class="badge badge-light" id="total-pages-alert"><?php echo $totalPages; ?></span>
                         </div>
                     </div>
                 </div>
@@ -123,7 +124,8 @@ $data = json_decode($json, TRUE);
                                     <?php echo $value["original_title"] ?>
                                 </h4>
                                 <div class="mbr-section-btn align-center text-sm-center text-center btn-bottom">
-                                    <a href="movie_view.php?movie_id=<?php echo $value["id"]?>" class="btn btn-secondary btn-xs display-4 text-sm-center">View</a>
+                                    <a href="movie_view.php?movie_id=<?php echo $value["id"] ?>"
+                                       class="btn btn-secondary btn-xs display-4 text-sm-center">View</a>
                                 </div>
                             </div>
                         </div>
@@ -170,6 +172,15 @@ $data = json_decode($json, TRUE);
 <script src="assets/pagination/jquery.bootpag.min.js"></script>
 <script>
 
+    function searchQuery(value) {
+        let num = 1;
+        let query = value;
+        let urlLink = "<?php echo HTTPS_API_THEMOVIEDB_ORG_3_SEARCH_MOVIE . "?" . $api_key?>&page=" + num + "&query=" + query;
+        if (query.length > 4) {
+            ajaxCallFunction(urlLink, num);
+        }
+    }
+
     let paging = $('#page-selection').bootpag({
         total: <?php echo $totalPages; ?>,
         page: 1,
@@ -204,48 +215,7 @@ $data = json_decode($json, TRUE);
             });
     }
 
-    function rePaginate(num, total_pages) {
-        paging.off("page");
-        paging = $('#page-selection').bootpag({
-            total: total_pages,
-            page: num,
-            maxVisible: 10,
-        }).on("page", function (event, /* page number here */ num) {
-            // $("#content").html("Insert content"); // some ajax content loading...
-            let query = $("#search").val();
-            let urlLink = "<?php echo HTTPS_API_THEMOVIEDB_ORG_3_MOVIE . $category . $api_key;?>&page=" + num;
-            if (query.length != 0) {
-                urlLink = "<?php echo HTTPS_API_THEMOVIEDB_ORG_3_SEARCH_MOVIE . "?" . $api_key?>&page=" + num + "&query=" + query;
-            }
-            $.ajax({
-                url: urlLink,
-                type: "get",
-                dataType: 'json', // added data type
-                success: function (res) {
-                    console.log(res);
-                    // console.log(res.results);
-                    let movies = res.results;
-                    $("#page-number-alert").text(num);
-                    $("#total-pages-alert").text(res.total_pages);
-                    populateMovies(movies)
-                    rePaginate(num, res.total_pages);
-                },
-                error: function () {
-
-                }
-            })
-        });
-        ;
-    }
-
-    // init bootpag
-    paging.on("page", function (event, /* page number here */ num) {
-        // $("#content").html("Insert content"); // some ajax content loading...
-        let query = $("#search").val();
-        let urlLink = "<?php echo HTTPS_API_THEMOVIEDB_ORG_3_MOVIE . $category . $api_key;?>&page=" + num;
-        if (query.length != 0) {
-            urlLink = "<?php echo HTTPS_API_THEMOVIEDB_ORG_3_SEARCH_MOVIE . "?" . $api_key?>&page=" + num + "&query=" + query;
-        }
+    function ajaxCallFunction(urlLink, num) {
         $.ajax({
             url: urlLink,
             type: "get",
@@ -260,9 +230,38 @@ $data = json_decode($json, TRUE);
                 rePaginate(num, res.total_pages);
             },
             error: function () {
-
+// sweet alert
             }
-        })
+        });
+    }
+
+    function rePaginate(num, total_pages) {
+        paging.off("page");
+        paging = $('#page-selection').bootpag({
+            total: total_pages,
+            page: num,
+            maxVisible: 10,
+        }).on("page", function (event, /* page number here */ num) {
+            // $("#content").html("Insert content"); // some ajax content loading...
+            let query = $("#search").val();
+            let urlLink = "<?php echo HTTPS_API_THEMOVIEDB_ORG_3_MOVIE . $category . $api_key;?>&page=" + num;
+            if (query.length != 0) {
+                urlLink = "<?php echo HTTPS_API_THEMOVIEDB_ORG_3_SEARCH_MOVIE . "?" . $api_key?>&page=" + num + "&query=" + query;
+            }
+            ajaxCallFunction(urlLink, num);
+        });
+
+    }
+
+    // init bootpag
+    paging.on("page", function (event, /* page number here */ num) {
+        // $("#content").html("Insert content"); // some ajax content loading...
+        let query = $("#search").val();
+        let urlLink = "<?php echo HTTPS_API_THEMOVIEDB_ORG_3_MOVIE . $category . $api_key;?>&page=" + num;
+        if (query.length != 0) {
+            urlLink = "<?php echo HTTPS_API_THEMOVIEDB_ORG_3_SEARCH_MOVIE . "?" . $api_key?>&page=" + num + "&query=" + query;
+        }
+        ajaxCallFunction(urlLink, num);
     });
 </script>
 <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"></a></div>
