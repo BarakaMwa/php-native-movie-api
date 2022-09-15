@@ -15,7 +15,7 @@
         <div class="navbar-brand">
                 <span class="navbar-logo">
                     <a href="https://mobirise.com">
-                        <img src="assets/images/mbr-122x122.png" alt="Mobirise" title="" style="height: 3.8rem;">
+                        <img src="assets/images/mbr-122x122.png" alt="Poster" title="" style="height: 3.8rem;">
                     </a>
                 </span>
             <span class="navbar-caption-wrap"><a class="navbar-caption text-black display-4"

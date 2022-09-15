@@ -1,9 +1,6 @@
 <?php
 $page_category = "";
 const KEY = "d0f5f2e135336200362af8a1a73acb17";
-const HTTPS_API_THEMOVIEDB_ORG_3_SEARCH_MOVIE_API_KEY = "https://api.themoviedb.org/3/search/movie?api_key=" . KEY;
-const HTTPS_API_THEMOVIEDB_ORG_3_MOVIE_POPULAR_API_KEY = "https://api.themoviedb.org/3/movie/popular?api_key=" . KEY;
-const HTTPS_API_THEMOVIEDB_ORG_3_MOVIE_POPULAR_API_KEY_PAGE_1 = "https://api.themoviedb.org/3/movie/popular?api_key=" . KEY . "&page=1";
 const HTTPS_API_THEMOVIEDB_ORG_3_MOVIE = "https://api.themoviedb.org/3/movie/";
 const HTTPS_API_THEMOVIEDB_ORG_3_SEARCH_MOVIE = "https://api.themoviedb.org/3/search/movie";
 $response = null;
@@ -72,8 +69,9 @@ $data = json_decode($json, TRUE);
     <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
 
     <link rel="stylesheet" href="assets/theme/css/sidebar-style.css">
-    <link rel="stylesheet" href="assets/theme/css/searchbar-style.css">
     <link rel="stylesheet" href="assets/uikit-2.27.5/css/uikit.min.css">
+    <link rel="stylesheet" href="assets/sweetalert/css/sweetalert.css">
+    <link rel="stylesheet" href="assets/theme/css/searchbar-style.css">
 
 </head>
 <body>
@@ -170,15 +168,18 @@ $data = json_decode($json, TRUE);
 
 <script src="assets/theme/js/sidebar-script.js"></script>
 <script src="assets/pagination/jquery.bootpag.min.js"></script>
+<script src="assets/sweetalert/js/sweetalert.min.js"></script>
+
 <script>
 
     function searchQuery(value) {
         let num = 1;
         let query = value;
-        let urlLink = "<?php echo HTTPS_API_THEMOVIEDB_ORG_3_SEARCH_MOVIE . "?" . $api_key?>&page=" + num + "&query=" + query;
+        let urlLink = "<?php echo HTTPS_API_THEMOVIEDB_ORG_3_MOVIE . $category . $api_key;?>&page=" + num;
         if (query.length > 4) {
-            ajaxCallFunction(urlLink, num);
+            urlLink = "<?php echo HTTPS_API_THEMOVIEDB_ORG_3_SEARCH_MOVIE . "?" . $api_key?>&page=" + num + "&query=" + query;
         }
+        ajaxCallFunction(urlLink, num);
     }
 
     let paging = $('#page-selection').bootpag({
@@ -215,6 +216,17 @@ $data = json_decode($json, TRUE);
             });
     }
 
+    function disPlaySwal(title,text,type) {
+        swal({
+            title: title,
+            text: text,
+            type: type,
+            button: "OK",
+        }, function () {
+
+        })
+    }
+
     function ajaxCallFunction(urlLink, num) {
         $.ajax({
             url: urlLink,
@@ -222,15 +234,20 @@ $data = json_decode($json, TRUE);
             dataType: 'json', // added data type
             success: function (res) {
                 console.log(res);
-                // console.log(res.results);
                 let movies = res.results;
-                $("#page-number-alert").text(num);
-                $("#total-pages-alert").text(res.total_pages);
-                populateMovies(movies)
-                rePaginate(num, res.total_pages);
+                if(res.total_pages > 0){
+                    $("#page-number-alert").text(num);
+                    $("#total-pages-alert").text(res.total_pages);
+                    populateMovies(movies)
+                    rePaginate(num, res.total_pages);
+                }else{
+                    // sweet alert
+                    disPlaySwal("No Movies Found","Try a Different Search.","warning");
+                }
             },
             error: function () {
 // sweet alert
+                disPlaySwal("Yikes","Something Went Wrong.","error");
             }
         });
     }

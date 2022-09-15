@@ -1,0 +1,41 @@
+Array ( [
+  adult
+] => [
+  backdrop_path
+] => /gbkNAiMz4xTlpn3qS7bnL0OIDT6.jpg; [
+  belongs_to_collection
+] => Array ( [
+  id
+] => 8050; [
+  name
+] => Highlander Collection [
+  poster_path
+] => /mNIXoyFicGseg9NoG3NHKZolKze.jpg; [
+  backdrop_path
+] => /4f9kGJeKQTWjK0aAVootsdinDju.jpg; ) [
+  budget
+] => 13000000; [
+  genres
+] => Array ( [
+  0
+] => Array ( [
+  id
+] => 28 [
+  name
+] => Action ) [
+  1
+] => Array ( [
+  id
+] => 14 [
+  name
+] => Fantasy ) ) [
+  homepage
+] => [
+  id
+] => 13360 [
+  imdb_id
+] => tt0299981 [
+  original_language
+] => en [
+  original_title
+] => Highlander: The Source [overview] => The world is falling into chaos. As he roams a crumbling city, Duncan MacLeod, the Highlander, remembers happier times before the love of his life left... Hopeless and alone, MacLeod finds his way to a band of immortal companions, including his mysterious friend Methos, and a mortal, Watcher Joe Dawson. Together this small group sets out on a quest to find the origin of the first Immortal. [popularity] => 8.426 [poster_path] => /qWdY6uXHluOA1nlyocKMEZUVbz5.jpg [production_companies] => Array ( [0] => Array ( [id] => 2737 [logo_path] => [name] => Davis-Panzer Productions [origin_country] => ) [1] => Array ( [id] => 2739 [logo_path] => [name] => Sequence Film [origin_country] => ) ) [production_countries] => Array ( [0] => Array ( [iso_3166_1] => GB [name] => United Kingdom ) [1] => Array ( [iso_3166_1] => LT [name] => Lithuania ) [2] => Array ( [iso_3166_1] => US [name] => United States of America ) ) [release_date] => 2007-02-06 [revenue] => 0 [runtime] => 86 [spoken_languages] => Array ( [0] => Array ( [english_name] => English [iso_639_1] => en [name] => English ) ) [status] => Released [tagline] => In a world without end, their will is eternal. But a quest for the source of immortality will awaken the Guardian., [title] => Highlander: The Source, [video] => [vote_average] => 3.956, [vote_count] => 149 )

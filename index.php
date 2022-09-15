@@ -29,6 +29,7 @@ $data = json_decode($json, TRUE);
     <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
 
     <link rel="stylesheet" href="assets/theme/css/sidebar-style.css">
+    <link rel="stylesheet" href="assets/sweetalert/css/sweetalert2.min.css">
 
 </head>
 <body>
@@ -213,6 +214,7 @@ $data = json_decode($json, TRUE);
 <!--<script src="assets/theme/js/script.js"></script>-->
 
 <script src="assets/theme/js/sidebar-script.js"></script>
+<script src="assets/sweetalert/js/sweetalert.min.js"></script>
 
 
 <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i></i></a></div>
