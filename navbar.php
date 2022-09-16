@@ -31,7 +31,7 @@
                    data-toggle="dropdown-submenu" aria-expanded="false">
                     TvShows</a>
                 <div class="dropdown-menu"><a class="text-black dropdown-item display-4" href="tv_shows_view.php?category=popular">Popular</a><a
-                            class="text-black dropdown-item display-4" href="tv_shows_view.php?category=airing_todays">Airing Today</a><a
+                            class="text-black dropdown-item display-4" href="tv_shows_view.php?category=airing_today">Airing Today</a><a
                             class="text-black dropdown-item display-4" href="tv_shows_view.php?category=on_the_air">On The Air</a><a
                             class="text-black dropdown-item display-4" href="tv_shows_view.php?category=latest">Latest</a><a
                             class="text-black dropdown-item display-4" href="tv_shows_view.php?category=top_rated">Top Rated</a></div>

@@ -172,7 +172,7 @@ $data = json_decode($json, TRUE);
                                     <?php echo $value["original_name"] ?>
                                 </h4>
                                 <div class="mbr-section-btn align-center text-sm-center text-center btn-bottom">
-                                    <a href="" class="btn btn-secondary btn-xs display-4 text-sm-center">View</a>
+                                    <a href="tv_show_view.php?tv_show_id=<?php echo $value["id"]; ?>" class="btn btn-secondary btn-xs display-4 text-sm-center">View</a>
                                 </div>
                             </div>
                         </div>
