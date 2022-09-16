@@ -1,5 +1,6 @@
 $(document).ready(function () {
     $(".card-box").hide();
+    $("#search").val("");
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active');
     });
@@ -11,4 +12,3 @@ $(document).ready(function () {
             $(this).find(".card-box").hide();
         });
 });
-

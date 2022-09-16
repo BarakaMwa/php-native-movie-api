@@ -1,12 +1,11 @@
 <?php
 $page_category = "";
 const KEY = "d0f5f2e135336200362af8a1a73acb17";
-const HTTPS_API_THEMOVIEDB_ORG_3_MOVIE = "https://api.themoviedb.org/3/movie/";
-const HTTPS_API_THEMOVIEDB_ORG_3_SEARCH_MOVIE = "https://api.themoviedb.org/3/search/movie";
+const HTTPS_API_THEMOVIEDB_ORG_3_TV = "https://api.themoviedb.org/3/tv/";
+const HTTPS_API_THEMOVIEDB_ORG_3_SEARCH_TV = "https://api.themoviedb.org/3/search/tv";
 $response = null;
-
 $api_key = KEY;
-$url = HTTPS_API_THEMOVIEDB_ORG_3_MOVIE;
+$url = HTTPS_API_THEMOVIEDB_ORG_3_TV;
 $page = "&page=1";
 $category = "popular";
 $language = "en-US";
@@ -71,7 +70,6 @@ $data = json_decode($json, TRUE);
 
 </head>
 <body>
-
 <section class="wrapper">
     <!-- Sidebar Holder -->
     <?php include("sidebar.php"); ?>
@@ -98,12 +96,12 @@ $data = json_decode($json, TRUE);
                         <div id="page-selection">Page
                             <span id="page-number-alert" class="badge badge-light">1</span>/
                             <span class="badge badge-light" id="total-pages-alert"><?php
-                                if(isset($totalPages) && !empty($totalPages)){
+                                if (isset($totalPages) && !empty($totalPages)) {
                                     echo $totalPages;
-                                }else{
+                                } else {
                                     echo 1;
                                 }
-                                 ?></span>
+                                ?></span>
                         </div>
                     </div>
                 </div>
@@ -124,11 +122,10 @@ $data = json_decode($json, TRUE);
                             </div>
                             <div class="card-box align-center">
                                 <h4 class="card-title mbr-fonts-style display-7">
-                                    <?php echo $value["original_title"] ?>
+                                    <?php echo $value["original_name"] ?>
                                 </h4>
                                 <div class="mbr-section-btn align-center text-sm-center text-center btn-bottom">
-                                    <a href="movie_view.php?movie_id=<?php echo $value["id"] ?>"
-                                       class="btn btn-secondary btn-xs display-4 text-sm-center">View</a>
+                                    <a href="tv_show_view.php?tv_show_id=<?php echo $value["id"]; ?>" class="btn btn-secondary btn-xs display-4 text-sm-center">View</a>
                                 </div>
                             </div>
                         </div>
@@ -144,11 +141,10 @@ $data = json_decode($json, TRUE);
                                 </div>
                                 <div class="card-box align-center">
                                     <h4 class="card-title mbr-fonts-style display-7">
-                                        <?php echo $value["original_title"] ?>
+                                        <?php echo $value["original_name"] ?>
                                     </h4>
                                     <div class="mbr-section-btn align-center text-sm-center text-center btn-bottom">
-                                        <a href="movie_view.php?movie_id=<?php echo $value["id"] ?>"
-                                           class="btn btn-secondary btn-xs display-4 text-sm-center">View</a>
+                                        <a href="tv_show_view.php?tv_show_id=<?php echo $value["id"]; ?>" class="btn btn-secondary btn-xs display-4 text-sm-center">View</a>
                                     </div>
                                 </div>
                             </div>
@@ -164,8 +160,6 @@ $data = json_decode($json, TRUE);
         </section>
 
         <section once="" class="cid-thfg01DqU1" id="footer6-u">
-
-
             <div class="container">
                 <div class="media-container-row align-center mbr-white">
                     <div class="col-12">
@@ -176,6 +170,7 @@ $data = json_decode($json, TRUE);
                 </div>
             </div>
         </section>
+
     </section>
 
 
@@ -202,9 +197,9 @@ $data = json_decode($json, TRUE);
     function searchQuery(value) {
         let num = 1;
         let query = value;
-        let urlLink = "<?php echo HTTPS_API_THEMOVIEDB_ORG_3_MOVIE . $category . $api_key;?>&page=" + num;
+        let urlLink = "<?php echo HTTPS_API_THEMOVIEDB_ORG_3_TV . $category . $api_key;?>&page=" + num;
         if (query.length > 4) {
-            urlLink = "<?php echo HTTPS_API_THEMOVIEDB_ORG_3_SEARCH_MOVIE . "?" . $api_key?>&page=" + num + "&query=" + query;
+            urlLink = "<?php echo HTTPS_API_THEMOVIEDB_ORG_3_SEARCH_TV . "?" . $api_key?>&page=" + num + "&query=" + query;
         }
         ajaxCallFunction(urlLink, num);
     }
@@ -288,9 +283,9 @@ $data = json_decode($json, TRUE);
         }).on("page", function (event, /* page number here */ num) {
             // $("#content").html("Insert content"); // some ajax content loading...
             let query = $("#search").val();
-            let urlLink = "<?php echo HTTPS_API_THEMOVIEDB_ORG_3_MOVIE . $category . $api_key;?>&page=" + num;
+            let urlLink = "<?php echo HTTPS_API_THEMOVIEDB_ORG_3_TV . $category . $api_key;?>&page=" + num;
             if (query.length != 0) {
-                urlLink = "<?php echo HTTPS_API_THEMOVIEDB_ORG_3_SEARCH_MOVIE . "?" . $api_key?>&page=" + num + "&query=" + query;
+                urlLink = "<?php echo HTTPS_API_THEMOVIEDB_ORG_3_SEARCH_TV . "?" . $api_key?>&page=" + num + "&query=" + query;
             }
             ajaxCallFunction(urlLink, num);
         });
@@ -301,9 +296,9 @@ $data = json_decode($json, TRUE);
     paging.on("page", function (event, /* page number here */ num) {
         // $("#content").html("Insert content"); // some ajax content loading...
         let query = $("#search").val();
-        let urlLink = "<?php echo HTTPS_API_THEMOVIEDB_ORG_3_MOVIE . $category . $api_key;?>&page=" + num;
+        let urlLink = "<?php echo HTTPS_API_THEMOVIEDB_ORG_3_TV . $category . $api_key;?>&page=" + num;
         if (query.length != 0) {
-            urlLink = "<?php echo HTTPS_API_THEMOVIEDB_ORG_3_SEARCH_MOVIE . "?" . $api_key?>&page=" + num + "&query=" + query;
+            urlLink = "<?php echo HTTPS_API_THEMOVIEDB_ORG_3_SEARCH_TV . "?" . $api_key?>&page=" + num + "&query=" + query;
         }
         ajaxCallFunction(urlLink, num);
     });

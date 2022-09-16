@@ -1,12 +1,11 @@
 <?php
-
-$movie_id = 0;
+$tv_show_id = 0;
 $response = null;
 $page_category = "";
 $language = "en-US";
 const KEY = "d0f5f2e135336200362af8a1a73acb17";
 const API_KEY = "?api_key=" . KEY;
-const HTTPS_API_THEMOVIEDB_ORG_3_MOVIE = "https://api.themoviedb.org/3/movie/";
+const HTTPS_API_THEMOVIEDB_ORG_3_MOVIE = "https://api.themoviedb.org/3/tv/";
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $language = "&language=" . $language;
@@ -16,10 +15,10 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         $language = "&language=" . $language;
     }
 
-    if (isset($_GET["movie_id"]) && !empty($_GET["movie_id"])) {
-        $movie_id = $_GET["movie_id"];
+    if (isset($_GET["tv_show_id"]) && !empty($_GET["tv_show_id"])) {
+        $tv_show_id = $_GET["tv_show_id"];
     }
-    $url = HTTPS_API_THEMOVIEDB_ORG_3_MOVIE . $movie_id . API_KEY . $language;
+    $url = HTTPS_API_THEMOVIEDB_ORG_3_MOVIE . $tv_show_id . API_KEY . $language;
 
     $response = file_get_contents($url);
 }
@@ -81,19 +80,32 @@ $data = json_decode($json, TRUE);
                              class="img-thumbnail" alt="Poster">
                     </div>
 
-                    <div class="media-content">
+                    <div class="media-content pt-4">
                         <h1 class="mbr-section-title mbr-white pb-3 mbr-fonts-style display-1 text-sm-left"><strong>
-                                <?php echo $data["original_title"] ?>
+                                <?php echo $data["original_name"] ?>
                             </strong></h1>
 
                         <div class="mbr-section-text mbr-white pb-3 ">
+                            <h6 class="text-white">Created By</h6>
+                            <p class="mbr-text mbr-fonts-style display-5 text-white text-sm-left">
+                                <b><?php
+                                    $created_by = $data["created_by"];
+                                    foreach ($created_by as $value) {
+                                        echo $value["name"] . ", ";
+                                    }
+                                    ?></b>
+                            </p>
                             <h6 class="text-white">Overview</h6>
                             <p class="mbr-text mbr-fonts-style display-5 text-white text-sm-left">
                                 <b><?php echo $data["overview"] ?></b>
                             </p>
                             <h6 class="text-white">Release Date</h6>
                             <p class="mbr-text mbr-fonts-style display-5 text-white text-sm-left">
-                                <b><?php echo $data["release_date"] ?></b>
+                                <b><?php echo $data["first_air_date"] ?></b>
+                            </p>
+                            <h6 class="text-white">Last Air Date</h6>
+                            <p class="mbr-text mbr-fonts-style display-5 text-white text-sm-left">
+                                <b><?php echo $data["last_air_date"] ?></b>
                             </p>
                             <h6 class="text-white">Genres</h6>
                             <p class="mbr-text mbr-fonts-style display-5 text-white text-sm-left">
@@ -108,16 +120,77 @@ $data = json_decode($json, TRUE);
                         <div class="mbr-section-btn text-sm-left">
                             <a class="btn btn-md btn-primary display-4"
                                href="https://mobirise.com">LIke</a>
-                            <a class="btn btn-md btn-white-outline display-4" href="https://mobirise.com">Buy Ticket</a>
+                            <a class="btn btn-md btn-white-outline display-4" href="https://mobirise.com">Watch On</a>
                         </div>
                     </div>
                 </div>
             </div>
 
         </section>
+        <section class="tabs1 cid-thAroZfwCO mbr-parallax-background pt-1" id="tabs1-1v"
+                 data-jarallax-original-styles="null"
+                 style="z-index: 0; position: relative; background-image: url('https://image.tmdb.org/t/p/original<?php echo $data["backdrop_path"] ?>'); background-attachment: scroll; background-size: auto;">
+
+            <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(0, 0, 0);">
+            </div>
+
+            <div class="container pt-1">
+                <h2 class="mbr-white align-left text-left pb-5 mbr-fonts-style mbr-bold display-2">
+                    Seasons</h2>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 align-left">
+                        <ul class="nav nav-tabs text-left" role="tablist">
+                            <?php
+                            $seasons = $data["seasons"];
+                            $count = 0;
+                            foreach ($seasons as $value) {
+                                echo '<li class="nav-item">
+                                <a class="nav-link mbr-fonts-style active show display-7" role="tab"
+                                   data-toggle="tab"
+                                   href="#season_' . $value["id"] . '" aria-selected="true">
+                                    ' . $value["name"] . '</a>
+                            </li>';
+                                $count++;
+                            }
+                            ?>
+
+                        </ul>
+                        <div class="tab-content p-4">
+                            <?php
+                            $seasons = $data["seasons"];
+                            $count = 0;
+                            foreach ($seasons as $value) {
+                                echo '
+                            <div id="season_' . $value["id"] . '" class="tab-pane in active align-left" role="tabpanel">
+                                <div class="media-container-row">
+                    <div class="mbr-figure" style="width: 20%;">
+                        <img src="https://image.tmdb.org/t/p/w500' . $value["poster_path"] . '"
+                             class="img-thumbnail" alt="Poster">
+                    </div>
+
+                    <div class="media-content p-4">
+                        <h6 class="mbr-section-title mbr-white pb-3 mbr-fonts-style text-sm-left"><strong>' . $value["name"] . '
+                                           </strong></h6>
+                        <div class="mbr-section-text mbr-white pb-3 ">
+                            <p class="mbr-text mbr-fonts-style display-5 text-white text-sm-left">
+                                <b>' . $value["overview"] . '</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                            </div>';
+                                $count++;
+                            }
+                            ?>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </div>
     </section>
 </section>
-
 <script src="assets/web/assets/jquery/jquery.min.js"></script>
 <script src="assets/popper/popper.min.js"></script>
 <script src="assets/tether/tether.min.js"></script>
@@ -136,4 +209,3 @@ $data = json_decode($json, TRUE);
 <input name="animation" type="hidden">
 </body>
 </html>
-

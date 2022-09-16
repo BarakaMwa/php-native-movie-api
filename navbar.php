@@ -15,7 +15,7 @@
         <div class="navbar-brand">
                 <span class="navbar-logo">
                     <a href="https://mobirise.com">
-                        <img src="assets/images/mbr-122x122.png" alt="Mobirise" title="" style="height: 3.8rem;">
+                        <img src="assets/images/mbr-122x122.png" alt="Poster" title="" style="height: 3.8rem;">
                     </a>
                 </span>
             <span class="navbar-caption-wrap"><a class="navbar-caption text-black display-4"
@@ -30,21 +30,21 @@
                 <a class="nav-link link text-black dropdown-toggle display-4" href="tv_shows_view.html"
                    data-toggle="dropdown-submenu" aria-expanded="false">
                     TvShows</a>
-                <div class="dropdown-menu"><a class="text-black dropdown-item display-4" href="tv_shows_view.html">Popular</a><a
-                            class="text-black dropdown-item display-4" href="tv_shows_view.html">Airing Today</a><a
-                            class="text-black dropdown-item display-4" href="tv_shows_view.html">On The Air</a><a
-                            class="text-black dropdown-item display-4" href="tv_shows_view.html">Latest</a><a
-                            class="text-black dropdown-item display-4" href="tv_shows_view.html">Top Rated</a></div>
+                <div class="dropdown-menu"><a class="text-black dropdown-item display-4" href="tv_shows_view.php?category=popular">Popular</a><a
+                            class="text-black dropdown-item display-4" href="tv_shows_view.php?category=airing_today">Airing Today</a><a
+                            class="text-black dropdown-item display-4" href="tv_shows_view.php?category=on_the_air">On The Air</a><a
+                            class="text-black dropdown-item display-4" href="tv_shows_view.php?category=latest">Latest</a><a
+                            class="text-black dropdown-item display-4" href="tv_shows_view.php?category=top_rated">Top Rated</a></div>
             </li>
             <li class="nav-item dropdown open"><a class="nav-link link text-black dropdown-toggle display-4"
                                                   href="movies_view.html" data-toggle="dropdown-submenu"
                                                   aria-expanded="true">
                     Movies</a>
-                <div class="dropdown-menu"><a class="text-black dropdown-item display-4" href="movies_view.html">Popular</a><a
-                            class="text-black dropdown-item display-4" href="movies_view.html">Air Today</a><a
-                            class="text-black dropdown-item display-4" href="movies_view.html">On The Air</a><a
-                            class="text-black dropdown-item display-4" href="movies_view.html">Latest</a><a
-                            class="text-black dropdown-item display-4" href="movies_view.html">Top Rated<br></a></div>
+                <div class="dropdown-menu"><a class="text-black dropdown-item display-4" href="movies_view.php?category=popular">Popular</a><a
+                            class="text-black dropdown-item display-4" href="movies_view.php?category=now_playing">Now Playing</a><a
+                            class="text-black dropdown-item display-4" href="movies_view.php?category=upcoming">Up Coming</a><a
+                            class="text-black dropdown-item display-4" href="movies_view.php?category=latest">Latest</a><a
+                            class="text-black dropdown-item display-4" href="movies_view.php?category=top_rated">Top Rated<br></a></div>
             </li>
             <li class="nav-item">
                 <a class="nav-link link text-black display-4" href="https://mobirise.com">
