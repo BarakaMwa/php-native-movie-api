@@ -80,9 +80,9 @@ $data = json_decode($json, TRUE);
                              class="img-thumbnail" alt="Poster">
                     </div>
 
-                    <div class="media-content">
+                    <div class="media-content pt-4">
                         <h1 class="mbr-section-title mbr-white pb-3 mbr-fonts-style display-1 text-sm-left"><strong>
-                                <?php echo $data["original_title"] ?>
+                                <?php echo $data["original_name"] ?>
                             </strong></h1>
 
                         <div class="mbr-section-text mbr-white pb-3 ">
@@ -103,6 +103,10 @@ $data = json_decode($json, TRUE);
                             <p class="mbr-text mbr-fonts-style display-5 text-white text-sm-left">
                                 <b><?php echo $data["first_air_date"] ?></b>
                             </p>
+                            <h6 class="text-white">Last Air Date</h6>
+                            <p class="mbr-text mbr-fonts-style display-5 text-white text-sm-left">
+                                <b><?php echo $data["last_air_date"] ?></b>
+                            </p>
                             <h6 class="text-white">Genres</h6>
                             <p class="mbr-text mbr-fonts-style display-5 text-white text-sm-left">
                                 <b><?php
@@ -116,13 +120,75 @@ $data = json_decode($json, TRUE);
                         <div class="mbr-section-btn text-sm-left">
                             <a class="btn btn-md btn-primary display-4"
                                href="https://mobirise.com">LIke</a>
-                            <a class="btn btn-md btn-white-outline display-4" href="https://mobirise.com">Buy Ticket</a>
+                            <a class="btn btn-md btn-white-outline display-4" href="https://mobirise.com">Watch On</a>
                         </div>
                     </div>
                 </div>
             </div>
 
         </section>
+        <section class="tabs1 cid-thAroZfwCO mbr-parallax-background pt-1" id="tabs1-1v"
+                 data-jarallax-original-styles="null"
+                 style="z-index: 0; position: relative; background-image: url('https://image.tmdb.org/t/p/original<?php echo $data["backdrop_path"] ?>'); background-attachment: scroll; background-size: auto;">
+
+            <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(0, 0, 0);">
+            </div>
+
+            <div class="container pt-1">
+                <h2 class="mbr-white align-left text-left pb-5 mbr-fonts-style mbr-bold display-2">
+                    Seasons</h2>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 align-left">
+                        <ul class="nav nav-tabs text-left" role="tablist">
+                            <?php
+                            $seasons = $data["seasons"];
+                            $count = 0;
+                            foreach ($seasons as $value) {
+                                echo '<li class="nav-item">
+                                <a class="nav-link mbr-fonts-style active show display-7" role="tab"
+                                   data-toggle="tab"
+                                   href="#season_' . $value["id"] . '" aria-selected="true">
+                                    ' . $value["name"] . '</a>
+                            </li>';
+                                $count++;
+                            }
+                            ?>
+
+                        </ul>
+                        <div class="tab-content p-4">
+                            <?php
+                            $seasons = $data["seasons"];
+                            $count = 0;
+                            foreach ($seasons as $value) {
+                                echo '
+                            <div id="season_' . $value["id"] . '" class="tab-pane in active align-left" role="tabpanel">
+                                <div class="media-container-row">
+                    <div class="mbr-figure" style="width: 20%;">
+                        <img src="https://image.tmdb.org/t/p/w500' . $value["poster_path"] . '"
+                             class="img-thumbnail" alt="Poster">
+                    </div>
+
+                    <div class="media-content p-4">
+                        <h6 class="mbr-section-title mbr-white pb-3 mbr-fonts-style text-sm-left"><strong>' . $value["name"] . '
+                                           </strong></h6>
+                        <div class="mbr-section-text mbr-white pb-3 ">
+                            <p class="mbr-text mbr-fonts-style display-5 text-white text-sm-left">
+                                <b>' . $value["overview"] . '</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                            </div>';
+                                $count++;
+                            }
+                            ?>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </div>
     </section>
 </section>
 <script src="assets/web/assets/jquery/jquery.min.js"></script>

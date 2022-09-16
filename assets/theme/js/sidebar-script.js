@@ -12,4 +12,3 @@ $(document).ready(function () {
             $(this).find(".card-box").hide();
         });
 });
-
