@@ -67,14 +67,14 @@ $data = json_decode($json, TRUE);
             <?php include("navbar.php"); ?>
         </section>
 
-        <section class="header3 cid-thuJpxCW3Z mbr-fullscreen mbr-parallax-background" id="header3-1u"
+        <section class="header3 cid-thuJpxCW3Z mbr-fullscreen mbr-parallax-background pt-sm-5" id="header3-1u"
                  data-jarallax-original-styles="null"
                  style="z-index: 0; position: relative; background-image: url('https://image.tmdb.org/t/p/original<?php echo $data["backdrop_path"] ?>'); background-attachment: scroll; background-size: auto;">
 
             <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(0, 0, 0);">
             </div>
 
-            <div class="container">
+            <div class="container mt-sm-5">
                 <div class="media-container-row">
                     <div class="mbr-figure" style="width: 50%;">
                         <img src="https://image.tmdb.org/t/p/w500<?php echo $data["poster_path"] ?>"
@@ -82,21 +82,21 @@ $data = json_decode($json, TRUE);
                     </div>
 
                     <div class="media-content">
-                        <h1 class="mbr-section-title mbr-white pb-3 mbr-fonts-style display-1"><strong>
+                        <h1 class="mbr-section-title mbr-white pb-3 mbr-fonts-style display-1 text-sm-left"><strong>
                                 <?php echo $data["original_title"] ?>
                             </strong></h1>
 
                         <div class="mbr-section-text mbr-white pb-3 ">
                             <h6 class="text-white">Overview</h6>
-                            <p class="mbr-text mbr-fonts-style display-5 text-white">
+                            <p class="mbr-text mbr-fonts-style display-5 text-white text-sm-left">
                                 <b><?php echo $data["overview"] ?></b>
                             </p>
                             <h6 class="text-white">Release Date</h6>
-                            <p class="mbr-text mbr-fonts-style display-5 text-white">
+                            <p class="mbr-text mbr-fonts-style display-5 text-white text-sm-left">
                                 <b><?php echo $data["release_date"] ?></b>
                             </p>
                             <h6 class="text-white">Genres</h6>
-                            <p class="mbr-text mbr-fonts-style display-5 text-white">
+                            <p class="mbr-text mbr-fonts-style display-5 text-white text-sm-left">
                                 <b><?php
                                     $genres = $data["genres"];
                                     foreach ($genres as $value) {
@@ -105,8 +105,9 @@ $data = json_decode($json, TRUE);
                                     ?></b>
                             </p>
                         </div>
-                        <div class="mbr-section-btn"><a class="btn btn-md btn-primary display-4"
-                                                        href="https://mobirise.com">LIke</a>
+                        <div class="mbr-section-btn text-sm-left">
+                            <a class="btn btn-md btn-primary display-4"
+                               href="https://mobirise.com">LIke</a>
                             <a class="btn btn-md btn-white-outline display-4" href="https://mobirise.com">Buy Ticket</a>
                         </div>
                     </div>
