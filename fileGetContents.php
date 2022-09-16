@@ -28,7 +28,7 @@ $data = json_decode($json, TRUE);
 
 //var_dump($response);
 
-print_r($data["results"][0]);
+print_r($data);
 
 //$response = json_encode($response);
 //var_dump(json_decode($response));
