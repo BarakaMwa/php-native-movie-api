@@ -20,7 +20,7 @@
                 </span>
             <span class="navbar-caption-wrap"><a class="navbar-caption text-black display-4"
                                                  href="https://mobirise.com">
-                        MOBIRISE
+                        MovieApp-Php
                     </a></span>
         </div>
     </div>
