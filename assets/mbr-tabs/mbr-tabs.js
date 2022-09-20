@@ -24,7 +24,7 @@ function initTabs(target) {
     }
 }
 
-// MovieApp-Php Initilizaton
+// MovieTVApp-Php Initilizaton
 var isBuilder = $('html').hasClass('is-builder');
 if (isBuilder) {
     $(document).on('add.cards', function(e) {
