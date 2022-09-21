@@ -15,3 +15,15 @@ B
 tv_shows_view.html,c\1\c15bfc73b6a497457b206fbb1b7ec2c0eff05ad4
 ;
 sidebar.php,3\c\3cf4a720c216d250c65c4daf1507c9dd76ba45a7
+9
+	index.php,b\b\bb6499b8e938f92a3695fff1afe57edea4b9efb7
+C
+fileGetContents.php,8\e\8ec806a1c9bbbaef6d2acb67c288941a2f454bef
+R
+"assets/theme/css/sidebar-style.css,b\0\b01c257bc1d8fd6922d58f1a90e7b872834bb579
+I
+assets/theme/js/script.js,b\5\b54a0ec353a8bd199708af71751db9992ffc81d0
+V
+&assets/mobirise/css/mbr-additional.css,6\1\618eecc8e4a3714070fb4bff7c3ed7e9a97b8bed
+Q
+!assets/theme/js/sidebar-script.js,8\9\89a724016a2c244dddc2f8ae8bc2808abbc40586

@@ -1,0 +1,131 @@
+
+qjavascript:S3776"URefactor this function to reduce its Cognitive Complexity from 517 to the 15 allowed.(éÈ„±
+Jjavascript:S3504")Unexpected var, use let or const instead.(¦Î›‚şÿÿÿÿ
+ujavascript:S1172"YRemove the unused function parameter "x" or rename it to "_x" to make intention explicit.(ÈÕéª
+Ojavascript:S1121"3Extract the assignment of "t" from this expression.(ÍÚöß
+Jjavascript:S3504")Unexpected var, use let or const instead.(Ü“§¨şÿÿÿÿ
+Jjavascript:S3504")Unexpected var, use let or const instead.(ò¤éãûÿÿÿÿ
+Ejavascript:S3504")Unexpected var, use let or const instead.(áÉùİ
+ujavascript:S1172>"YRemove the unused function parameter "$" or rename it to "_$" to make intention explicit.(È”ÚÛ
+Gjavascript:S1117>"+'$' is already declared in the upper scope.(È”ÚÛ
+Ejavascript:S3504A")Unexpected var, use let or const instead.(¿¸Ş
+Ejavascript:S3504B")Unexpected var, use let or const instead.(º©İß
+Ejavascript:S3504E")Unexpected var, use let or const instead.(ÀìıÚ
+Jjavascript:S3504\")Unexpected var, use let or const instead.(éä’ıÿÿÿÿ
+`javascript:S1481]"?Remove the declaration of the unused 'originalMargin' variable.(Ë•¼Æÿÿÿÿÿ
+^javascript:S1481]"=Remove the declaration of the unused 'touchHandler' variable.(Ë•¼Æÿÿÿÿÿ
+[javascript:S1854]":Remove this useless assignment to variable "touchHandler".(Ë•¼Æÿÿÿÿÿ
+Gjavascript:S1481a"+Remove unused function 'getScrollbarWidth'.(´ø¶ß
+Ejavascript:S3504c")Unexpected var, use let or const instead.(·ò¨Û
+Jjavascript:S3504v")Unexpected var, use let or const instead.(ñ€Û†şÿÿÿÿ
+Jjavascript:S3504w")Unexpected var, use let or const instead.(Ñ©Éûùÿÿÿÿ
+Kjavascript:S3504†")Unexpected var, use let or const instead.(¿åÌ¦ùÿÿÿÿ
+Kjavascript:S3504ˆ")Unexpected var, use let or const instead.(Ø•íşÿÿÿÿ
+Fjavascript:S3504‰")Unexpected var, use let or const instead.(µÕÙ¡
+Kjavascript:S3504Š")Unexpected var, use let or const instead.(©†Ãâıÿÿÿÿ
+Kjavascript:S3504‹")Unexpected var, use let or const instead.(¨ÚÓçüÿÿÿÿ
+Kjavascript:S3504—")Unexpected var, use let or const instead.(úŞÂšşÿÿÿÿ
+Fjavascript:S3504Ÿ")Unexpected var, use let or const instead.(¡÷™
+Fjavascript:S3504¢")Unexpected var, use let or const instead.(Şªº
+Fjavascript:S3504º")Unexpected var, use let or const instead.(”‘€“
+ƒjavascript:S1172Ö"aRemove the unused function parameter "event" or rename it to "_event" to make intention explicit.(ÑŸïŒùÿÿÿÿ
+Fjavascript:S3504Ø")Unexpected var, use let or const instead.(­İ¹Í
+fjavascript:S1871õ"IThis case's code block is the same as the block for the case on line 235.(éØèÏ
+{javascript:S1172ƒ"YRemove the unused function parameter "e" or rename it to "_e" to make intention explicit.(¥Í“íüÿÿÿÿ
+Kjavascript:S3504‰")Unexpected var, use let or const instead.(ùğ˜Æùÿÿÿÿ
+Kjavascript:S3504")Unexpected var, use let or const instead.(È›Ğ·şÿÿÿÿ
+Fjavascript:S3504")Unexpected var, use let or const instead.(µÆ¬·
+Fjavascript:S3504’")Unexpected var, use let or const instead.(´®êî
+ƒjavascript:S1172¥"aRemove the unused function parameter "event" or rename it to "_event" to make intention explicit.(³¤ĞĞşÿÿÿÿ
+Kjavascript:S3504É")Unexpected var, use let or const instead.(í§«øÿÿÿÿ
+Fjavascript:S3504Ê")Unexpected var, use let or const instead.(ºÃãÑ
+qjavascript:S5843Ê"TSimplify this regular expression to reduce its complexity from 21 to the 20 allowed.(ºÃãÑ
+Yjavascript:S5842Ê"<Rework this part of the regex to not match the empty string.(ºÃãÑ
+;javascript:S6323Ê"Remove this empty alternative.(ºÃãÑ
+Fjavascript:S3504Ì")Unexpected var, use let or const instead.(Ù÷·Ù
+]javascript:S2589×"@This always evaluates to truthy. Consider refactoring this code.(É¶ß
+Kjavascript:S3504Ø")Unexpected var, use let or const instead.(î‰¾üÿÿÿÿ
+Kjavascript:S3504Ş")Unexpected var, use let or const instead.(‘³•¬üÿÿÿÿ
+]javascript:S2589ü"@This always evaluates to truthy. Consider refactoring this code.(©÷û˜
+Kjavascript:S3504ı")Unexpected var, use let or const instead.(‡ı¤‰üÿÿÿÿ
+Kjavascript:S3504‚")Unexpected var, use let or const instead.(ßã¶éşÿÿÿÿ
+Wjavascript:S1854"5Remove this useless assignment to variable "request".(ĞÃ­ùøÿÿÿÿ
+Fjavascript:S3504Æ")Unexpected var, use let or const instead.(˜ŸÓ„
+Kjavascript:S3504Í")Unexpected var, use let or const instead.(Êõšÿÿÿÿÿ
+Kjavascript:S3504Ò")Unexpected var, use let or const instead.(—ßùÊüÿÿÿÿ
+Kjavascript:S3504Ó")Unexpected var, use let or const instead.(êÃª±øÿÿÿÿ
+Mjavascript:S1117ß"+'e' is already declared in the upper scope.(ùºŸ­şÿÿÿÿ
+Fjavascript:S3504ç")Unexpected var, use let or const instead.(Á§¸
+Kjavascript:S3504è")Unexpected var, use let or const instead.(Îšµÿÿÿÿÿ
+Fjavascript:S3504é")Unexpected var, use let or const instead.(ƒïâÅ
+Kjavascript:S3504ê")Unexpected var, use let or const instead.(¿›Æùÿÿÿÿ
+Fjavascript:S3504ë")Unexpected var, use let or const instead.(ĞŞ—Ô
+Kjavascript:S3504õ")Unexpected var, use let or const instead.(Ê™Í›ùÿÿÿÿ
+Kjavascript:S3504€")Unexpected var, use let or const instead.(ÌÇíüùÿÿÿÿ
+Fjavascript:S3504‚")Unexpected var, use let or const instead.(«¨Äæ
+Kjavascript:S1117œ"/'event' is already declared in the upper scope.(£Ççf
+javascript:S1172œ"eRemove the unused function parameter "service" or rename it to "_service" to make intention explicit.(£Ççf
+Fjavascript:S3504²")Unexpected var, use let or const instead.(Äö‹‹
+Fjavascript:S3504·")Unexpected var, use let or const instead.(ø§ø
+Fjavascript:S3504Á")Unexpected var, use let or const instead.(Òéæ¾
+Kjavascript:S3504Â")Unexpected var, use let or const instead.(µ×ßÃıÿÿÿÿ
+Kjavascript:S3504Ã")Unexpected var, use let or const instead.(Ü®Ô¯ûÿÿÿÿ
+Fjavascript:S3504Æ")Unexpected var, use let or const instead.(‡Ûúğ
+Fjavascript:S3504Ç")Unexpected var, use let or const instead.(×†“¢
+Fjavascript:S3504È")Unexpected var, use let or const instead.(ŸÍ¬ı
+Kjavascript:S3504É")Unexpected var, use let or const instead.(®ÑØ™ÿÿÿÿÿ
+Fjavascript:S3504Ê")Unexpected var, use let or const instead.(š¯‘
+Kjavascript:S3504Ø")Unexpected var, use let or const instead.(äÎÑ°ûÿÿÿÿ
+ƒjavascript:S1172à"aRemove the unused function parameter "event" or rename it to "_event" to make intention explicit.(‡ªŠúÿÿÿÿ
+‹javascript:S1172à"iRemove the unused function parameter "direction" or rename it to "_direction" to make intention explicit.(‡ªŠúÿÿÿÿ
+‰javascript:S1172à"gRemove the unused function parameter "distance" or rename it to "_distance" to make intention explicit.(‡ªŠúÿÿÿÿ
+‰javascript:S1172à"gRemove the unused function parameter "duration" or rename it to "_duration" to make intention explicit.(‡ªŠúÿÿÿÿ
+javascript:S1172à"mRemove the unused function parameter "fingerCount" or rename it to "_fingerCount" to make intention explicit.(‡ªŠúÿÿÿÿ
+Fjavascript:S3504ê")Unexpected var, use let or const instead.(¶î“ë
+Fjavascript:S3504")Unexpected var, use let or const instead.(şñ›ú
+Fjavascript:S3504…")Unexpected var, use let or const instead.(Í¼¤ò
+Fjavascript:S3504")Unexpected var, use let or const instead.(ÊêÂ
+Kjavascript:S3504“")Unexpected var, use let or const instead.(û¾ıÖÿÿÿÿÿ
+Kjavascript:S3504”")Unexpected var, use let or const instead.(„ŒÜûÿÿÿÿ
+^javascript:S1126–"<Replace this if-then-else flow by a single return statement.(³‘÷ûÿÿÿÿ
+Fjavascript:S3504 ")Unexpected var, use let or const instead.(Úßƒ´
+Kjavascript:S3504¼")Unexpected var, use let or const instead.(ùÂ¦Ÿüÿÿÿÿ
+Fjavascript:S3504½")Unexpected var, use let or const instead.(†˜¼
+Kjavascript:S3504Ç")Unexpected var, use let or const instead.(½Îİ•ûÿÿÿÿ
+ƒjavascript:S2392Ç"aConsider moving declaration of 'vimeoPlayer' as it is referenced outside current binding context.(½Îİ•ûÿÿÿÿ
+Kjavascript:S3504İ")Unexpected var, use let or const instead.(Øºáñúÿÿÿÿ
+Fjavascript:S3504à")Unexpected var, use let or const instead.(ºÃãÑ
+qjavascript:S5843à"TSimplify this regular expression to reduce its complexity from 21 to the 20 allowed.(ºÃãÑ
+Yjavascript:S5842à"<Rework this part of the regex to not match the empty string.(ºÃãÑ
+;javascript:S6323à"Remove this empty alternative.(ºÃãÑ
+Ejavascript:S3504ñ")Unexpected var, use let or const instead.(µâ–e
+tjavascript:S4144…"XUpdate this function so that its implementation is not identical to the one on line 761.(±ñ­Y
+tjavascript:S4144Š"XUpdate this function so that its implementation is not identical to the one on line 766.(±ñ­Y
+Kjavascript:S3504˜")Unexpected var, use let or const instead.(æüÿÿÿÿÿÿ
+Fjavascript:S3504œ")Unexpected var, use let or const instead.(”ÌŞ´
+Fjavascript:S3504¤")Unexpected var, use let or const instead.(”ÌŞ´
+Kjavascript:S3504¸")Unexpected var, use let or const instead.(Ã“äşÿÿÿÿ
+Fjavascript:S3504¹")Unexpected var, use let or const instead.(ÖöÀ²
+Fjavascript:S3504¾")Unexpected var, use let or const instead.(×¿Ğƒ
+Kjavascript:S1481Ã".Remove unused function 'updateClientCarousel'.(êÂ†ê
+Fjavascript:S3504Ä")Unexpected var, use let or const instead.(”ÌŞ´
+ujavascript:S4144Ë"XUpdate this function so that its implementation is not identical to the one on line 823.(äÑÔ÷
+Kjavascript:S3504Ì")Unexpected var, use let or const instead.(Ã“äşÿÿÿÿ
+Fjavascript:S3504Í")Unexpected var, use let or const instead.(ÖöÀ²
+Fjavascript:S3504Ò")Unexpected var, use let or const instead.(×¿Ğƒ
+Cjavascript:S1481×"&Remove unused function 'clickHandler'.(µàÓæ
+Kjavascript:S3504Û")Unexpected var, use let or const instead.(ğ ûÛøÿÿÿÿ
+Kjavascript:S3504Ü")Unexpected var, use let or const instead.(—‹çêûÿÿÿÿ
+Kjavascript:S3504İ")Unexpected var, use let or const instead.(æÉ·Èüÿÿÿÿ
+Fjavascript:S3504æ")Unexpected var, use let or const instead.(Õ›±
+Kjavascript:S3504ò")Unexpected var, use let or const instead.(çÃ´‡üÿÿÿÿ
+Kjavascript:S3504ó")Unexpected var, use let or const instead.(ÛİÜºûÿÿÿÿ
+Fjavascript:S3504ô")Unexpected var, use let or const instead.(­ÆÓ
+~javascript:S1172"aRemove the unused function parameter "index" or rename it to "_index" to make intention explicit.(û’Œ
+xjavascript:S1172"[Remove the unused function parameter "el" or rename it to "_el" to make intention explicit.(û’Œ
+}javascript:S1172˜"aRemove the unused function parameter "index" or rename it to "_index" to make intention explicit.(¹õÿ|
+wjavascript:S1172˜"[Remove the unused function parameter "el" or rename it to "_el" to make intention explicit.(¹õÿ|
+Kjavascript:S3504±")Unexpected var, use let or const instead.(Ó½—úüÿÿÿÿ
+Fjavascript:S3504½")Unexpected var, use let or const instead.(‚‚©œ
+Fjavascript:S3504Ñ")Unexpected var, use let or const instead.(İÄ«‰
+Ejavascript:S3504í")Unexpected var, use let or const instead.(ÈÂ½"
