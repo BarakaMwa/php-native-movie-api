@@ -1,12 +1,12 @@
 <?php
 ?>
-<nav id="sidebar">
-    <div class="sidebar-header">
-        <h3>FilmMedia Pedia</h3>
+<nav id="sidebar" class="pt-5">
+    <div class="sidebar-header pt-5">
+        <h3 class="display-7 uk-text-bold">MovieTVApp-Php</h3>
     </div>
 
-    <ul class="list-unstyled components">
-        <p>Side Bar Menu</p>
+    <ul class="list-unstyled components uk-text-bold">
+        <p>Menu</p>
         <li class="active">
             <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Item</a>
             <ul class="collapse list-unstyled" id="homeSubmenu">
