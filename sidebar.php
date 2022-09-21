@@ -6,13 +6,13 @@
     </div>
 
     <ul class="list-unstyled components">
-        <p>Dummy Heading</p>
+        <p>Side Bar Menu</p>
         <li class="active">
-            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Home</a>
+            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Item</a>
             <ul class="collapse list-unstyled" id="homeSubmenu">
-                <li><a href="#">Home 1</a></li>
-                <li><a href="#">Home 2</a></li>
-                <li><a href="#">Home 3</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 2</a></li>
+                <li><a href="#">Item 3</a></li>
             </ul>
         </li>
         <li>
@@ -32,8 +32,8 @@
         </li>
     </ul>
 
-    <ul class="list-unstyled CTAs">
+   <!-- <ul class="list-unstyled CTAs">
         <li><a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a></li>
         <li><a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a></li>
-    </ul>
+    </ul>-->
 </nav>
