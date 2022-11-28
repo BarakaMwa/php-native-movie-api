@@ -89,7 +89,7 @@ $data = json_decode($json, TRUE);
                             <h2 class="align-center mbr-bold mbr-white pb-3 mbr-fonts-style display-5">Movie List</h2>
                         </div>
                         <input type="search" class="form-control-sm mt-3" name="search"
-                               onkeyup="searchQuery(this.value)" id="search"
+                               oninput="searchQuery(this.value)" id="search"
                                placeholder="Search......">
                     </div>
                     <div class="row pl-5 pr-4 mt-4">
